@@ -1,57 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SBT Reseller - Shop</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SBT Reseller</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+    .product {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      width: 200px;
+    }
+    .product img {
+      max-width: 100%;
+      height: auto;
+    }
+    .product h3 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .product p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .product button {
+      background-color: #28a745;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .product button:hover {
+      background-color: #218838;
+    }
+    #cart {
+      margin: 20px auto;
+      max-width: 600px;
+      border: 1px solid #000;
+      padding: 10px;
+      background-color: #fff;
+    }
+    #cart h3 {
+      text-align: center;
+    }
+    #cart div {
+      margin: 5px 0;
+      display: flex;
+      justify-content: space-between;
+    }
+    #cart .total {
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welkom bij SBT Reseller</h1>
-        <p>Bekijk onze producten</p>
-    </header>
-    
-    <main>
-        <section class="product">
-            <img src="https://images.fashiola.be/product-list/300x450/miinto/649348210/accessoires-heren-s-katoen-ebony-new-web-hat.webp" alt="Gucci Pet" class="product-image">
-            <div class="product-info">
-                <h2>Gucci Pet</h2>
-                <p>Prijs: €40,00</p>
-                <p>Beschikbare kleuren: Verschillende kleuren</p>
-            </div>
-        </section>
 
-        <section class="product">
-            <img src="link-naar-nocta-image.jpg" alt="Nocta Tech Fleece" class="product-image">
-            <div class="product-info">
-                <h2>Nocta Tech Fleece</h2>
-                <p>Prijs: €90,00 voor set</p>
-                <p>Prijs: €50,00 voor broek</p>
-                <p>Prijs: €50,00 voor trui</p>
-            </div>
-        </section>
+<header>
+  <h1>SBT Reseller</h1>
+</header>
 
-        <section class="product">
-            <img src="link-naar-airforce-image.jpg" alt="Air Force White" class="product-image">
-            <div class="product-info">
-                <h2>Air Force White</h2>
-                <p>Prijs: €60,00</p>
-            </div>
-        </section>
+<div class="container">
+  <div class="product">
+    <h3>Nocta Tech Fleece Set</h3>
+    <img src="https://via.placeholder.com/150" alt="Nocta Tech Fleece">
+    <p>Prijs: €90</p>
+    <button onclick="addToCart('Nocta Tech Fleece Set', 90)">Voeg toe aan winkelwagen</button>
+  </div>
+  <div class="product">
+    <h3>Nocta Tech Fleece Broek</h3>
+    <img src="https://via.placeholder.com/150" alt="Nocta Tech Fleece Broek">
+    <p>Prijs: €50</p>
+    <button onclick="addToCart('Nocta Tech Fleece Broek', 50)">Voeg toe aan winkelwagen</button>
+  </div>
+  <div class="product">
+    <h3>Air Force White</h3>
+    <img src="https://via.placeholder.com/150" alt="Air Force White">
+    <p>Prijs: €60</p>
+    <button onclick="addToCart('Air Force White', 60)">Voeg toe aan winkelwagen</button>
+  </div>
+  <div class="product">
+    <h3>Gucci Pet</h3>
+    <img src="https://via.placeholder.com/150" alt="Gucci Pet">
+    <p>Prijs: €40</p>
+    <button onclick="addToCart('Gucci Pet', 40)">Voeg toe aan winkelwagen</button>
+  </div>
+  <div class="product">
+    <h3>Goyard Cardholder</h3>
+    <img src="https://via.placeholder.com/150" alt="Goyard Cardholder">
+    <p>Prijs: €40 (2 voor €70)</p>
+    <button onclick="addToCart('Goyard Cardholder', 40)">Voeg toe aan winkelwagen</button>
+  </div>
+</div>
 
-        <section class="product">
-            <img src="link-naar-goyard-image.jpg" alt="Goyard Cardholder" class="product-image">
-            <div class="product-info">
-                <h2>Goyard Cardholder</h2>
-                <p>Prijs: €40,00</p>
-                <p>Koop 2 voor €70,00</p>
-            </div>
-        </section>
-    </main>
+<div id="cart">
+  <h3>Winkelwagen</h3>
+  <p>Je winkelwagen is leeg.</p>
+</div>
 
-    <footer>
-        <p>&copy; 2024 SBT Reseller. Alle rechten voorbehouden.</p>
-    </footer>
+<script>
+  let cart = [];
+
+  function addToCart(product, price) {
+    cart.push({ product, price });
+    alert(`${product} is toegevoegd aan je winkelwagen!`);
+    updateCartDisplay();
+  }
+
+  function updateCartDisplay() {
+    const cartContainer = document.getElementById('cart');
+    cartContainer.innerHTML = '<h3>Winkelwagen</h3>';
+    let total = 0;
+
+    cart.forEach((item, index) => {
+      total += item.price;
+      const itemDiv = document.createElement('div');
+      itemDiv.innerHTML = `
+        ${item.product} - €${item.price}
+        <button onclick="removeFromCart(${index})">Verwijder</button>
+      `;
+      cartContainer.appendChild(itemDiv);
+    });
+
+    const totalDiv = document.createElement('div');
+    totalDiv.className = 'total';
+    totalDiv.textContent = `Totaal: €${total}`;
+    cartContainer.appendChild(totalDiv);
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCartDisplay();
+  }
+</script>
+
 </body>
 </html>
