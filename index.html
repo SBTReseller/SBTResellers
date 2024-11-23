@@ -8,53 +8,56 @@
 </head>
 <body>
   <header>
-    <h1>Welkom bij SBT Reseller</h1>
-    <nav>
-      <a href="#products">Bekijk Producten</a>
-      <a href="#cart">Winkelwagen</a>
-    </nav>
+    <h1>Welkom bij SBT Reseller!</h1>
+    <p>De beste deals, speciaal voor jou.</p>
   </header>
-
   <main>
-    <section id="products">
-      <h2>Onze Producten</h2>
+    <div class="products">
+      <!-- Nocta Tech Fleece -->
       <div class="product">
         <img src="nocta.jpg" alt="Nocta Tech Fleece">
         <h3>Nocta Tech Fleece Set</h3>
-        <p>€90</p>
-        <button onclick="addToCart('Nocta Tech Fleece Set', 90)">Toevoegen aan winkelwagen</button>
+        <p class="price">€90 <span class="discount">€75 (20% Korting!)</span></p>
+        <button>Koop nu</button>
       </div>
+      <!-- Air Force White -->
       <div class="product">
         <img src="airforce.jpg" alt="Air Force White">
         <h3>Air Force White</h3>
-        <p>€60</p>
-        <button onclick="addToCart('Air Force White', 60)">Toevoegen aan winkelwagen</button>
+        <p class="price">€60</p>
+        <button>Koop nu</button>
       </div>
+      <!-- Gucci Pet -->
       <div class="product">
         <img src="gucci.jpg" alt="Gucci Pet">
         <h3>Gucci Pet</h3>
-        <p>€40</p>
-        <button onclick="addToCart('Gucci Pet', 40)">Toevoegen aan winkelwagen</button>
+        <p class="price">€40 <span class="discount">2 voor €70!</span></p>
+        <button>Koop nu</button>
       </div>
+      <!-- Goyard Cardholder -->
       <div class="product">
         <img src="goyard.jpg" alt="Goyard Cardholder">
         <h3>Goyard Cardholder</h3>
-        <p>€40 (2 voor €70)</p>
-        <button onclick="addToCart('Goyard Cardholder', 40)">Toevoegen aan winkelwagen</button>
+        <p class="price">€40</p>
+        <button>Koop nu</button>
       </div>
-    </section>
-
-    <section id="cart">
-      <h2>Winkelwagen</h2>
-      <ul id="cart-items"></ul>
-      <p id="total-price">Totaal: €0</p>
-    </section>
+      <!-- Random extra producten -->
+      <div class="product">
+        <img src="jacket.jpg" alt="Winterjas Supreme">
+        <h3>Winterjas Supreme</h3>
+        <p class="price">€120 <span class="discount">€99 (Speciale Winterdeal!)</span></p>
+        <button>Koop nu</button>
+      </div>
+      <div class="product">
+        <img src="watch.jpg" alt="Rolex Watch">
+        <h3>Rolex Watch</h3>
+        <p class="price">€10.000</p>
+        <button>Koop nu</button>
+      </div>
+    </div>
   </main>
-
   <footer>
-    <p>© 2024 SBT Reseller</p>
+    <p>&copy; 2024 SBT Reseller - Alles voor de laagste prijs!</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
