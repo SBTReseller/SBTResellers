@@ -1,63 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SBT Reseller</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SBTReseller</title>
 </head>
 <body>
-  <header>
-    <h1>Welkom bij SBT Reseller!</h1>
-    <p>De beste deals, speciaal voor jou.</p>
-  </header>
-  <main>
-    <div class="products">
-      <!-- Nocta Tech Fleece -->
-      <div class="product">
-        <img src="nocta.jpg" alt="Nocta Tech Fleece">
-        <h3>Nocta Tech Fleece Set</h3>
-        <p class="price">€90 <span class="discount">€75 (20% Korting!)</span></p>
-        <button>Koop nu</button>
-      </div>
-      <!-- Air Force White -->
-      <div class="product">
-        <img src="airforce.jpg" alt="Air Force White">
-        <h3>Air Force White</h3>
-        <p class="price">€60</p>
-        <button>Koop nu</button>
-      </div>
-      <!-- Gucci Pet -->
-      <div class="product">
-        <img src="gucci.jpg" alt="Gucci Pet">
-        <h3>Gucci Pet</h3>
-        <p class="price">€40 <span class="discount">2 voor €70!</span></p>
-        <button>Koop nu</button>
-      </div>
-      <!-- Goyard Cardholder -->
-      <div class="product">
-        <img src="goyard.jpg" alt="Goyard Cardholder">
-        <h3>Goyard Cardholder</h3>
-        <p class="price">€40</p>
-        <button>Koop nu</button>
-      </div>
-      <!-- Random extra producten -->
-      <div class="product">
-        <img src="jacket.jpg" alt="Winterjas Supreme">
-        <h3>Winterjas Supreme</h3>
-        <p class="price">€120 <span class="discount">€99 (Speciale Winterdeal!)</span></p>
-        <button>Koop nu</button>
-      </div>
-      <div class="product">
-        <img src="watch.jpg" alt="Rolex Watch">
-        <h3>Rolex Watch</h3>
-        <p class="price">€10.000</p>
-        <button>Koop nu</button>
-      </div>
+    <!-- Introductie Sectie -->
+    <header class="intro">
+        <h1>Welkom bij <span>SBTReseller</span></h1>
+        <p>De nieuwste kleding en accessoires, speciaal voor jou. Shop nu en geniet van kortingen!</p>
+        <button class="shop-now">Shop Nu</button>
+    </header>
+
+    <!-- Winkelwagen knop -->
+    <div class="cart">
+        <button id="cart-button">🛒 Winkelwagen</button>
     </div>
-  </main>
-  <footer>
-    <p>&copy; 2024 SBT Reseller - Alles voor de laagste prijs!</p>
-  </footer>
+
+    <!-- Producten sectie -->
+    <section class="products">
+        <h2>Onze Topproducten</h2>
+        <div class="product">
+            <img src="moncler.jpg" alt="Moncler Jas">
+            <h3>Moncler Jas</h3>
+            <p>€150</p>
+            <button class="buy-button">Koop nu</button>
+        </div>
+        <div class="product">
+            <img src="ami-paris.jpg" alt="AMI Paris Sweater">
+            <h3>AMI Paris Sweater</h3>
+            <p>€70</p>
+            <button class="buy-button">Koop nu</button>
+        </div>
+        <div class="product">
+            <img src="nocta.jpg" alt="Nocta Tech Fleece">
+            <h3>Nocta Tech Fleece</h3>
+            <p>€90 per set | €50 apart</p>
+            <button class="buy-button">Koop nu</button>
+        </div>
+        <div class="product">
+            <img src="airforce.jpg" alt="Air Force White">
+            <h3>Air Force White</h3>
+            <p>€60</p>
+            <button class="buy-button">Koop nu</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 SBTReseller. De beste deals, elke dag.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
