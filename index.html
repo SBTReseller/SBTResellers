@@ -1,80 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SBT Resellers</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBTResseller | Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>🔥 SBT Resellers - Hét adres voor premium fashion 🔥</h1>
-    <p>De beste deals, gegarandeerde kwaliteit en snelle levering!</p>
-  </header>
+    <!-- Header -->
+    <header class="header">
+        <h1>Welkom bij <span class="brand-name">SBTResseller</span></h1>
+        <p>Shop de nieuwste streetwear, schoenen en accessoires tegen de scherpste prijzen!</p>
+        <button onclick="scrollToProducts()" class="btn-primary">Ontdek onze producten</button>
+    </header>
 
-  <nav>
-    <a href="#producten">Producten</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#korting">Acties</a>
-  </nav>
-
-  <section id="intro">
-    <h2>Welkom bij SBT Resellers</h2>
-    <p>Ontdek onze unieke collectie van stijlvolle kleding en accessoires. Alles wat je nodig hebt, op één plek!</p>
-    <button>Bekijk de collectie</button>
-  </section>
-
-  <section id="producten">
-    <h2>Onze Producten</h2>
-    <div class="product">
-      <img src="images/moncler.jpg" alt="Moncler Jas">
-      <h3>Moncler Jas</h3>
-      <p class="price">€150</p>
-      <p class="desc">Blijf warm en stijlvol met de iconische Moncler jas.</p>
-      <button class="cart-btn">In Winkelwagen</button>
-      <button class="buy-btn">Koop Nu</button>
+    <!-- Winkelwagen knop -->
+    <div class="cart-btn-container">
+        <button id="cart-button" class="btn-secondary">🛒 Winkelwagen</button>
     </div>
-    <div class="product">
-      <img src="images/ami-paris.jpg" alt="AMI Paris Sweater">
-      <h3>AMI Paris Sweater</h3>
-      <p class="price">€70</p>
-      <p class="desc">Casual, classy en comfortabel. Perfect voor elk seizoen.</p>
-      <button class="cart-btn">In Winkelwagen</button>
-      <button class="buy-btn">Koop Nu</button>
-    </div>
-    <div class="product">
-      <img src="images/nocta.jpg" alt="Nocta Tech Fleece">
-      <h3>Nocta Tech Fleece</h3>
-      <p class="price">€90</p>
-      <p class="desc">Moderne sportkleding met een premium look.</p>
-      <button class="cart-btn">In Winkelwagen</button>
-      <button class="buy-btn">Koop Nu</button>
-    </div>
-    <div class="product">
-      <img src="images/airforce.jpg" alt="Air Force White">
-      <h3>Air Force White</h3>
-      <p class="price">€60</p>
-      <p class="desc">De klassieker die nooit uit de mode raakt.</p>
-      <button class="cart-btn">In Winkelwagen</button>
-      <button class="buy-btn">Koop Nu</button>
-    </div>
-  </section>
 
-  <section id="reviews">
-    <h2>Wat klanten zeggen</h2>
-    <blockquote>"Geweldige kwaliteit en snelle service!" - Samir</blockquote>
-    <blockquote>"Mijn favoriete plek voor stijlvolle kleding." - Leila</blockquote>
-    <blockquote>"Kortingen en originele designs, ik hou ervan!" - Aisha</blockquote>
-  </section>
+    <!-- Producten -->
+    <section id="products" class="products-section">
+        <h2>Onze Topproducten</h2>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="moncler.jpg" alt="Moncler jas">
+                <h3>Moncler Jas</h3>
+                <p class="price">€150,00</p>
+                <p>Blijf warm in stijl met deze iconische Moncler jas.</p>
+                <button onclick="addToCart('Moncler Jas', 150)" class="btn-primary">Koop nu</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="ami_paris.jpg" alt="AMI Paris Sweater">
+                <h3>AMI Paris Sweater</h3>
+                <p class="price">€70,00</p>
+                <p>Comfort en stijl met deze klassieke trui van AMI Paris.</p>
+                <button onclick="addToCart('AMI Paris Sweater', 70)" class="btn-primary">Koop nu</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="nocta.jpg" alt="Nocta Tech Fleece">
+                <h3>Nocta Tech Fleece</h3>
+                <p class="price">€90,00</p>
+                <p>De Nocta fleece voor ultieme stijl en comfort.</p>
+                <button onclick="addToCart('Nocta Tech Fleece', 90)" class="btn-primary">Koop nu</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product">
+                <img src="air_force.jpg" alt="Air Force 1">
+                <h3>Air Force 1 White</h3>
+                <p class="price">€60,00</p>
+                <p>Een must-have klassieker voor je sneakercollectie.</p>
+                <button onclick="addToCart('Air Force 1 White', 60)" class="btn-primary">Koop nu</button>
+            </div>
+        </div>
+    </section>
 
-  <section id="korting">
-    <h2>Kortingen</h2>
-    <p>🎉 Koop twee producten en krijg 20% korting op het tweede item!</p>
-    <p>🎉 Gratis verzending bij bestellingen boven €100!</p>
-  </section>
+    <!-- Fake Reviews -->
+    <section class="reviews-section">
+        <h2>Klantbeoordelingen</h2>
+        <div class="review">
+            <p>⭐️⭐️⭐️⭐️⭐️ "Snelle levering en topkwaliteit producten!" - Tim V.</p>
+        </div>
+        <div class="review">
+            <p>⭐️⭐️⭐️⭐️⭐️ "De prijzen zijn echt scherp, ik kom zeker terug." - Sara J.</p>
+        </div>
+        <div class="review">
+            <p>⭐️⭐️⭐️⭐️⭐️ "De klantenservice is fantastisch. Heel tevreden." - Jonas B.</p>
+        </div>
+    </section>
 
-  <footer>
-    <p>© 2024 SBT Resellers - Alle rechten voorbehouden.</p>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 SBTResseller. Alle rechten voorbehouden.</p>
+    </footer>
 </body>
 </html>
